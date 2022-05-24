@@ -1,0 +1,18 @@
+<suite thread-count="1" name="tests" allow-return-values="true"
+	parallel="instances" verbose="1">
+	<listeners>
+		<listener class-name="com.oneframe.testnglistener.TestNGListeners" />
+	</listeners>
+
+	<test name="ReqRest Test Suit">
+		<classes>
+			<class name="com.oneframe.tests.TestReqRes.api">
+			<!-- <class name="com.oneframe.tests.ui.TestInternetHerokuappHelper"> -->
+				<methods>
+					<exclude name="testMethod" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+</suite>

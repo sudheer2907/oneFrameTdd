@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="http://www.adventure-works.com">
+  <TestBed>
+    <TestData TestDataID= "1">
+      <name>Great Lakes Food Market</name>
+      <job>Howard Snyder</job>
+    </TestData>
+    <TestData TestDataID= "2">
+      <name>Great Lakes Food Market</name>
+      <job>Howard Snyder</job>
+    </TestData>
+    <TestData TestDataID= "3">
+     <name>Great Lakes Food Market</name>
+      <job>Howard Snyder</job>
+    </TestData>
+  </TestBed>
+  </Root>
