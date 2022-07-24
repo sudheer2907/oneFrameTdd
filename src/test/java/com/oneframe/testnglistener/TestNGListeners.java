@@ -14,34 +14,34 @@ public class TestNGListeners implements ITestListener, IRetryAnalyzer {
   private static final int maxRetryCount = 2;
 
   public void onTestStart(ITestResult result) {
-    //System.out.println("New Test Started:" + result.getName());
+    LogPrinter.printLog("Executing method:" + result.getName());
   }
 
   public void onTestSuccess(ITestResult result) {
-    //System.out.println("Test Successfully Finished:" + result.getName());
+    LogPrinter.printLog(result.getName() + " method passed");
   }
 
   public void onTestFailure(ITestResult result) {
-    System.out.println("Test Failed:" + result.getName());
+    LogPrinter.printLog(result.getName() + " method failed");
     WebDriverFactory.captureScreenShot(WebDriverFactory.getDriver(),
         result.getTestName() + System.currentTimeMillis());
   }
 
   public void onTestSkipped(ITestResult result) {
-    //System.out.println("Test Skipped:" + result.getName());
+    LogPrinter.printLog(result.getName() + " method skipped");
   }
 
   public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-    //System.out.println("Test Failed but within success percentage:" + result.getName());
+    //LogPrinter.printLog("Test Failed but within success percentage:" + result.getName());
   }
 
   public void onStart(ITestContext context) {
-    //System.out.println("This is onStart method:" + context.getOutputDirectory());
+    System.out.println("Execution started:" + context.getOutputDirectory());
   }
 
   public void onFinish(ITestContext context) {
-    //System.out.println("This is onFinish method:" + context.getPassedTests());
-    //System.out.println("This is onFinish method:" + context.getFailedTests());
+    System.out.println(context.getPassedTests());
+    System.out.println("This is onFinish method:" + context.getFailedTests());
   }
 
   @Override

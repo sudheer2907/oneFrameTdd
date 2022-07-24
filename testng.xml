@@ -6,8 +6,8 @@
 
 	<test name="ReqRest Test Suit">
 		<classes>
-			<class name="com.oneframe.tests.api.TestReqRes">
-			<!-- <class name="com.oneframe.tests.ui.TestInternetHerokuappHelper"> -->
+			<!-- <class name="com.oneframe.tests.api.TestReqRes"> -->
+			 <class name="com.oneframe.tests.ui.TestInternetHerokuappHelper">
 				<methods>
 					<exclude name="testMethod" />
 				</methods>

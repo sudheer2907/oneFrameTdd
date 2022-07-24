@@ -113,5 +113,4 @@ public class TestInternetHerokuappHelper {
     internetHerokuappHelper.clickOnDissapperaingElements();
   }
 
-
 }

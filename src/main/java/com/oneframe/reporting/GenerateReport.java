@@ -58,10 +58,12 @@ public class GenerateReport {
     boolean runWithJenkins = false;
     boolean parallelTesting = false;
     Configuration configuration = new Configuration(reportOutputDirectory, projName);
-    configuration.setStatusFlags(skippedFails, pendingFails, undefinedFails);
-    configuration.setParallelTesting(parallelTesting);
-    configuration.setJenkinsBasePath(jenkinsBasePath);
-    configuration.setRunWithJenkins(runWithJenkins);
+    /*
+     * configuration.setStatusFlags(skippedFails, pendingFails, undefinedFails);
+     * configuration.setParallelTesting(parallelTesting);
+     * configuration.setJenkinsBasePath(jenkinsBasePath);
+     * configuration.setRunWithJenkins(runWithJenkins);
+     */
     configuration.setBuildNumber(buildNumber);
     ReportBuilder reportBuilder = new ReportBuilder(jsonFiles, configuration);
     reportBuilder.generateReports();
